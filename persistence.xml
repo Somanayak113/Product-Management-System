@@ -1,0 +1,24 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="ProductManagementSystem" transaction-type="RESOURCE_LOCAL">
+    
+    	<class>com.ProductManagementSystem.entity.Customer</class>
+    	<class>com.ProductManagementSystem.entity.Product</class> 
+    	<class>com.ProductManagementSystem.entity.Order</class>  
+    	<class>com.ProductManagementSystem.entity.Supplier</class>
+    	
+        <properties>
+         	<property name="hibdernate.dialect" value="org.hibernate.dialect.MySQL8InnoDBDialect"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ProductManagementSystem" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="Rinka143@" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>
